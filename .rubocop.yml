@@ -1,0 +1,40 @@
+inherit_from: .rubocop_todo.yml
+
+AllCops:
+  TargetRubyVersion: 2.6.5
+  Exclude:
+    - 'bin/**'
+    - 'config.ru'
+    - 'config/**/*'
+    - 'db/**/*'
+    - 'lib/**'
+    - 'tmp/**/*'
+    - 'script/**/*'
+    - !ruby/regexp /old_and_unused\.rb$/
+
+# 日本語でのコメントを許可
+AsciiComments:
+  Enabled: false
+
+# 「and」「or」の使用を許可
+AndOr:
+  Enabled: false
+
+# クラスのコメント必須を無視
+Documentation:
+  Enabled: false
+
+# モジュール名::クラス名の定義を許可
+ClassAndModuleChildren:
+  Enabled: false
+
+# 文字リテラルのイミュータブル宣言を無視（freezeになるのはRuby3以降）
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# コメント行の長さは許可
+Metrics/LineLength:
+  IgnoredPatterns: ['\A( *)#']
+
+Style/SymbolArray:
+  EnforcedStyle: brackets

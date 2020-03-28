@@ -1,0 +1,12 @@
+.bundle
+.env
+.git
+.gitignore
+.rubocop.yml
+.rubocop_todo.yml
+.rspec
+log
+tmp
+vendor
+node_modules
+containers
