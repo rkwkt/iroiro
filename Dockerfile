@@ -1,7 +1,6 @@
 FROM ruby:2.6.5-alpine3.11
 
 ENV LANG=C.UTF-8
-ENV TZ=Asia/Tokyo
 ENV APP_ROOT="/app"
 
 WORKDIR ${APP_ROOT}
