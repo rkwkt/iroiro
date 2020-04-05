@@ -6,7 +6,6 @@ services:
       - db-volume:/var/lib/mysql
     environment:
       MYSQL_ROOT_PASSWORD: ${DATABASE_PASSWORD}
-      TZ: Asia/Tokyo
   app:
     build: .
     command: bundle exec pumactl start
